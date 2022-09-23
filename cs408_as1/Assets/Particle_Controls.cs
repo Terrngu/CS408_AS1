@@ -7,6 +7,7 @@ using UnityEngine;
 public class Particle_Controls : MonoBehaviour
 {
     public ParticleSystem magic_particles;
+    public ParticleSystem explosion;
     float acceleration = 5;
     public float valueR = 0.0F;
     public float valueG = 0.0F;
@@ -24,8 +25,10 @@ public class Particle_Controls : MonoBehaviour
     void Update()
     {
         var main = magic_particles.main;
+        var main_explosion = explosion.main; 
         main.startColor = new Color(valueR, valueG, valueB, valueA); 
         main.startSize = sizeValue; 
+        main_explosion.startSize = sizeValue;
 
         //TOGGLE SYSTEM
         if (Input.GetKeyDown("space")){

@@ -5024,6 +5024,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magic_particles: {fileID: 201646033}
+  explosion: {fileID: 385108807}
+  valueR: 0
+  valueG: 0
+  valueB: 0
+  valueA: 1
+  sizeValue: 3
 --- !u!1 &385108806
 GameObject:
   m_ObjectHideFlags: 0
