@@ -231,7 +231,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9f7bddcb828cdc64ea34f6332be1c818, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -364,8 +364,8 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 3
+      minMaxState: 0
+      scalar: 1
       minScalar: 2
       maxCurve:
         serializedVersion: 2
@@ -417,8 +417,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 100
+      minMaxState: 0
+      scalar: 90
       minScalar: 80
       maxCurve:
         serializedVersion: 2
@@ -534,7 +534,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 100
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1054,7 +1054,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 30
       mode: 0
       spread: 0
       speed:
@@ -1116,7 +1116,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 60
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1546,7 +1546,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -4057,12 +4057,12 @@ ParticleSystem:
     subEmitters:
     - serializedVersion: 3
       emitter: {fileID: 785650223}
-      type: 0
+      type: 4
       properties: 1
       emitProbability: 1
     - serializedVersion: 3
       emitter: {fileID: 385108807}
-      type: 2
+      type: 4
       properties: 1
       emitProbability: 1
   LightsModule:
@@ -5030,6 +5030,7 @@ MonoBehaviour:
   valueB: 0
   valueA: 1
   sizeValue: 3
+  speedValue: 90
 --- !u!1 &385108806
 GameObject:
   m_ObjectHideFlags: 0
