@@ -142,13 +142,24 @@ public class Particle_Controls : MonoBehaviour
         if (Input.GetKeyDown("k")){
             //print("k key was pressed");
             i += 1;
+            if (i > 4){
+                i = 4;
+            }
             psRenderer.material = mats[i];
         }
 
         if (Input.GetKeyDown("l")){
             //print("l key was pressed");
             i -= 1;
+            if (i < 0){
+                i = 0;
+            }
             psRenderer.material = mats[i];
+        }
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
         }
     }
     
