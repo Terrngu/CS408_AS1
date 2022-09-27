@@ -5025,9 +5025,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magic_particles: {fileID: 201646033}
   explosion: {fileID: 385108807}
-  valueR: 0
-  valueG: 0
-  valueB: 0
+  valueR: 0.25
+  valueG: 0.25
+  valueB: 0.25
   valueA: 1
   sizeValue: 100
   speedValue: 90
