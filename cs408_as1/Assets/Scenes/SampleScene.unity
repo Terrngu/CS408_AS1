@@ -5029,8 +5029,16 @@ MonoBehaviour:
   valueG: 0
   valueB: 0
   valueA: 1
-  sizeValue: 3
+  sizeValue: 100
   speedValue: 90
+  psRenderer: {fileID: 201646032}
+  mats:
+  - {fileID: 2100000, guid: 9f7bddcb828cdc64ea34f6332be1c818, type: 2}
+  - {fileID: 2100000, guid: 5acbb1205d18c3e4fb7c698130c8bb11, type: 2}
+  - {fileID: 2100000, guid: 6d78f49cfe8b0144b923a0d2f6a88f79, type: 2}
+  - {fileID: 2100000, guid: cd8df97d1b999d244aeee830ec80813c, type: 2}
+  - {fileID: 2100000, guid: 491696a36d448594a96ea454ecae83b1, type: 2}
+  i: 0
 --- !u!1 &385108806
 GameObject:
   m_ObjectHideFlags: 0

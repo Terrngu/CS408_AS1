@@ -8,18 +8,24 @@ public class Particle_Controls : MonoBehaviour
 {
     public ParticleSystem magic_particles;
     public ParticleSystem explosion;
+    
     float acceleration = 5;
     public float valueR = 0.25F;
     public float valueG = 0.25F;
     public float valueB = 0.25F;
     public float valueA = 1.0F;
     public float sizeValue = 100.0F;
-    public float speedValue = 90F;
+    public float speedValue = 90.0F;
+
+    public ParticleSystemRenderer psRenderer;
+    public Material[] mats = new Material[5];
+    public int i = 0;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        magic_particles = GetComponent<ParticleSystem>();
+        magic_particles = GetComponent<ParticleSystem>();    
     }
 
     // Update is called once per frame
@@ -29,7 +35,7 @@ public class Particle_Controls : MonoBehaviour
         var main_explosion = explosion.main; 
         main.startColor = new Color(valueR, valueG, valueB, valueA); 
         main.startSize = sizeValue; 
-        main_explosion.startSize = sizeValue;
+        //main_explosion.startSize = sizeValue;
         main.startSpeed = speedValue;
         
         float x = Input.GetAxis("Horizontal");
@@ -54,11 +60,11 @@ public class Particle_Controls : MonoBehaviour
         //SIZE CONTROL
         if (Input.GetKeyDown("=")){ //Increase particle size
             print("+ key was pressed");
-            sizeValue += 5.0F;
+            sizeValue += 10.0F;
         }
         if (Input.GetKeyDown("-")){ //Decrease particle size
             print("- key was pressed");
-            sizeValue -= 5.0F;
+            sizeValue -= 10.0F;
         }
 
         //COLOUR CONTROL
@@ -124,6 +130,18 @@ public class Particle_Controls : MonoBehaviour
             velocityOverLifetime.xMultiplier -= acceleration;
             velocityOverLifetime.yMultiplier -= acceleration;
             velocityOverLifetime.zMultiplier -= acceleration;
+        }
+
+        if (Input.GetKeyDown("k")){
+            print("k key was pressed");
+            i += 1;
+            psRenderer.material = mats[i];
+        }
+
+        if (Input.GetKeyDown("l")){
+            print("l key was pressed");
+            i -= 1;
+            psRenderer.material = mats[i];
         }
     }
     
