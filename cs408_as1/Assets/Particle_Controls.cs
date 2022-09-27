@@ -14,13 +14,15 @@ public class Particle_Controls : MonoBehaviour
     //Initialize variables
     public ParticleSystem magic_particles;
     public ParticleSystem explosion;
+    public ParticleSystem circle_explosion;
     
     float acceleration = 10.0F;
     public float valueR = 0.25F;
     public float valueG = 0.25F;
     public float valueB = 0.25F;
     public float valueA = 1.0F;
-    public float sizeValue = 100.0F;
+    //public float sizeValue = 100.0F;
+    public float sizeValue = 3.0F;
     public float speedValue = 90.0F;
 
     public ParticleSystemRenderer psRenderer;
@@ -33,27 +35,34 @@ public class Particle_Controls : MonoBehaviour
     {
         //Receive particle system object and assign it into the magic_particles variable
         magic_particles = GetComponent<ParticleSystem>();    
+        magic_particles.emissionRate = 0; //CREATIVE PORTION: Set emission rate to 0
     }
 
     // Update is called once per frame
     void Update()
     {
         var main = magic_particles.main;
-        //var main_explosion = explosion.main; 
+        var main_explosion = explosion.main; 
         main.startColor = new Color(valueR, valueG, valueB, valueA); 
         main.startSize = sizeValue; 
-        //main_explosion.startSize = sizeValue; 
+        main_explosion.startSize = sizeValue; 
         main.startSpeed = speedValue;
 
         //CREATIVE FEATURE: TOGGLE SYSTEM
         if (Input.GetKeyDown("space")){
             //print("space key was pressed");
-            if(magic_particles.isPlaying){
-                magic_particles.Stop();
+            //if(magic_particles.isPlaying){
+            //    magic_particles.Stop();
+            //}
+            //else{
+            //    magic_particles.Play();
+            //}
+
+            if (Input.GetKeyDown("space")){
+                magic_particles.Emit(1); //CREATIVE PORTION: Press space to emit a particle   
             }
-            else{
-                magic_particles.Play();
-            }
+
+
         }
         //END OF CREATIVE FEATURE
 
